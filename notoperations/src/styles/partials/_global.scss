@@ -49,7 +49,7 @@ footer {
     @include footer;
     @include flex(row, 0, nowrap);
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     width: 100%;
     background-color: $color-blue;
 }

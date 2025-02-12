@@ -7,8 +7,11 @@ const Footer = () => {
 
   return (
     <footer>
-      <img src={logoWhite} alt="Not Operations" className="logo" />
-      <section className="footer__container">
+        <section className="footer__container footer__container--left">
+        <img src={logoWhite} alt="Not Operations" className="logo" />
+        <p className='footer__name'>Not Operations</p>
+        </section>
+      <section className="footer__container footer__container--right">
         <div className="footer__socials">
             <a 
               href="https://www.linkedin.com/company/automation-k2a2/" 

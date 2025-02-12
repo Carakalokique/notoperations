@@ -8,11 +8,22 @@
     &__container {
         @include flex(column, 1rem, nowrap);
         justify-content: space-between;
-        align-items: flex-end;
+
+        &--left {
+            align-items: flex-start;
+        }
+
+        &--right {
+            align-items: flex-end;
+        }
+    }
+
+    &__name {
+        color: $color-white;
     }
 
     &__socials {
-        @include flex(row, 0, nowrap);
+        @include flex(row, 1rem, nowrap);
         justify-content: space-between;
         align-items: center;
     }
@@ -22,7 +33,7 @@
     }
 
     &__copyright {
-        font-size: .625rem;
+        // font-size: .625rem;
         font-weight: $medium;
         color: $color-white;
     }
