@@ -1,0 +1,84 @@
+@use 'variables' as *;
+@use "./fonts" as *;
+
+// Responsiveness
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+// Padding
+@mixin container {
+  padding: 2rem 3rem;
+  margin: 0 auto;
+}
+
+// Display
+@mixin flex($direction: row, $gap: 0, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+
+// Container
+@mixin header {
+  height: 5rem;
+  width: 100%;
+  color: $color-white;
+}
+
+@mixin footer {
+  height: 100%;
+  width: 100%;
+  background-color: $color-blue;
+}
+
+// Logo
+@mixin logo {
+  height: 1.875rem;
+}
+
+// Icons
+@mixin icons {
+  height: 1.5rem;
+}
+
+// Pointer
+@mixin pointer {
+  cursor: pointer;
+}
+
+@mixin button {
+  padding: .625rem 1.25rem;
+  border-radius: .3125rem;
+  border: none;
+  background: $color-blue;
+  @include montserrat;
+  font-size: 1rem;
+  font-weight: $semiBold;
+  color: $color-white;
+  margin: 0;
+  @include pointer;
+
+  &:hover {
+    background: $color-darkblue;
+    }
+}
+
+// Font mixins
+@mixin montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin open-sans {
+  font-family: 'OpenSans', sans-serif;
+}
+

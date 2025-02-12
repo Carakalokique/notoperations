@@ -1,0 +1,60 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/fonts' as *;
+
+.footer {
+
+    &__container {
+        @include flex(column, 1rem, nowrap);
+
+        &--left {
+            align-items: flex-start;
+        }
+
+        &--right {
+            align-items: flex-start;
+            
+            @include tablet {
+            align-items: flex-end;
+            }
+        }
+
+        @include tablet {
+            @include flex(column, 1rem, nowrap);
+            justify-content: space-between;
+        }
+
+    }
+
+    &__name {
+        color: $color-white;
+        font-size: .625rem;
+
+        @include tablet {
+            font-size: 1rem;
+            color: $color-white;
+        }
+    }
+
+    &__socials {
+        @include flex(row, 1rem, nowrap);
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__icons {
+        @include icons;
+    }
+
+    &__copyright {
+        font-size: .625rem;
+        font-weight: $medium;
+        color: $color-white;
+
+        @include tablet {
+            font-size: 1rem;
+            color: $color-white;
+        }
+    }
+}
