@@ -14,7 +14,7 @@ const Footer = () => {
       <section className="footer__container footer__container--right">
         <div className="footer__socials">
             <a 
-              href="https://www.linkedin.com/company/automation-k2a2/" 
+              href="https://www.linkedin.com/in/kennyalami/" 
               target="_blank" 
               rel="noopener noreferrer"
             >
