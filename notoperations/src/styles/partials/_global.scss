@@ -45,13 +45,18 @@ header {
 }
 
 footer {
+    @include flex(column, 2rem, nowrap);
     @include container;
     @include footer;
-    @include flex(row, 0, nowrap);
-    justify-content: space-between;
-    align-items: flex-end;
     width: 100%;
     background-color: $color-blue;
+
+    @include tablet {
+        @include flex(row, 0, nowrap);
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
 }
 
 /* Remove default link styles */

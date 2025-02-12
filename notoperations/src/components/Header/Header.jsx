@@ -11,12 +11,14 @@ const Header = () => {
   return (
     <header>
       <img src={logoBlack} alt="Not Operations" className="logo" />
+      <div className="header__button">
       <Button 
-        className="header__button"
+        className="button"
         onClick={handleClick}
       >
         Take Assessment
       </Button>
+      </div>
     </header>
   );
 };

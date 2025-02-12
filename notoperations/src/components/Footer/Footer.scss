@@ -7,19 +7,34 @@
 
     &__container {
         @include flex(column, 1rem, nowrap);
-        justify-content: space-between;
 
         &--left {
             align-items: flex-start;
         }
 
         &--right {
+            align-items: flex-start;
+            
+            @include tablet {
             align-items: flex-end;
+            }
         }
+
+        @include tablet {
+            @include flex(column, 1rem, nowrap);
+            justify-content: space-between;
+        }
+
     }
 
     &__name {
         color: $color-white;
+        font-size: .625rem;
+
+        @include tablet {
+            font-size: 1rem;
+            color: $color-white;
+        }
     }
 
     &__socials {
@@ -33,8 +48,13 @@
     }
 
     &__copyright {
-        // font-size: .625rem;
+        font-size: .625rem;
         font-weight: $medium;
         color: $color-white;
+
+        @include tablet {
+            font-size: 1rem;
+            color: $color-white;
+        }
     }
 }

@@ -6,3 +6,13 @@
 .logo {
     @include logo;
 }
+
+header {
+    .header__button {  // Target only buttons within header
+        display: none;
+
+        @include tablet {
+            display: block;
+        }
+    }
+}

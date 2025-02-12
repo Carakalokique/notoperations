@@ -32,23 +32,41 @@
     z-index: 1;  
     padding: 2rem 3rem;
     @include flex(column, 1rem);
+    justify-content: center;
+
+    @include tablet {
+        @include flex(column, 1rem);
+    }
   }
 
   &__tagline, &__title, a {
     position: relative;
     z-index: 2;
-    width: 50%;  // This creates the column effect
+
+    @include tablet {
+        width: 50%;  // This creates the column effect
+    }
   }
 
   &__tagline {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: $color-white;
+
+    @include tablet {
+        font-size: 1.25rem;
+        color: $color-white;
+    }
   }
 
   &__title {
-    font-size: 3rem;
+    font-size: 2rem;
     color: $color-white;
     font-weight: bold;
+
+    @include tablet {
+        font-size: 3rem;
+        color: $color-white;
+    }
   }
 
   &__button {
