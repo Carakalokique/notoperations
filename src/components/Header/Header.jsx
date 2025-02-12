@@ -5,7 +5,7 @@ import logoBlack from '../../assets/logos/logo_black.png';
 const Header = () => {
 
   const handleClick = () => {
-    window.location.href = 'https://scorecard.k2a2.co/businesslikegame/questions';
+    window.location.href = 'https://do.notoperations.com/quiz/questions';
   };
 
   return (
