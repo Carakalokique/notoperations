@@ -5,7 +5,7 @@ import logoBlack from '../../assets/logos/logo_black.png';
 const Header = () => {
 
   const handleClick = () => {
-    window.location.href = 'https://do.notoperations.com/quiz/questions';
+    window.location.href = 'https://why.notoperations.com/quiz/questions';
   };
 
   return (

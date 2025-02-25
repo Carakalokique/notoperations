@@ -1,7 +1,7 @@
 
 # Not Operations
 
-A minimalist website that helps users understand logical operations through interactive visualizations. This project demonstrates boolean logic gates (NOT, AND, OR, etc.) in an intuitive and visual way, making it easier for students and developers to grasp these fundamental computing concepts.
+The website for Not Operations.
 
 ## Getting Started
 
