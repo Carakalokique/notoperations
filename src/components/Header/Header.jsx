@@ -1,12 +1,11 @@
 import './Header.scss';
-import logo from '../../assets/logos/company-logo.svg';
-import menuIcon from '../../assets/icons/menu.svg';
+import logo from '../../assets/logos/logo_black.png';
 
 function Header() {
     return (
         <header className="header">
-            <img src={logo} alt="Company Logo" className="header__logo" />
-            <img src={menuIcon} alt="Menu" className="header__menu-icon" />
+            <img src={logo} alt="Not Operations" className="header__logo" />
+            <button className="header__button">Take Assessment</button>
         </header>
     );
 }

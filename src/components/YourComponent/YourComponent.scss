@@ -1,0 +1,18 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.your-component {
+    // Default mobile styles
+    padding: $standard-padding;
+    background-color: $primary-color;
+    
+    // Tablet styles
+    @include tablet {
+        padding: $standard-padding * 2;
+    }
+    
+    // Desktop styles
+    @include desktop {
+        padding: $standard-padding * 3;
+    }
+} 

@@ -1,9 +1,16 @@
+@use './variables' as *;  // Import variables
+@use './mixins' as *;  // Import mixins
+@use './fonts' as *;  // Import fonts
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
-body {
-    font-family: Arial, sans-serif;
+h1,
+h2,
+h3 {
+    font-family: 'Song Myung', serif;
 } 

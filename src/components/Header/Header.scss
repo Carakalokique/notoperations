@@ -1,10 +1,70 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/globals' as *;
 
 .header {
-    padding: 1rem;
-    
+    height: 6.0625rem;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    background-color: $color-white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &__logo {
+        height: 1.5rem;
+        margin-bottom: .75rem;
+    }
+
+    &__button {
+        display: none;
+        padding: 0.5rem 1rem;
+        background-color: $color-orange;
+        color: $color-white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-darkorange;
+        }
+    }
+
+    // Tablet styles (768px and up)
     @include tablet {
-        padding: 2rem;
+        height: 5rem;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3.75rem;
+
+        &__logo {
+            height: 1.875rem;
+            margin-bottom: 0;
+        }
+
+        &__button {
+            height: 2.5rem;
+            display: block;
+            padding: .625rem 1.25rem;
+        }
+    }
+
+    // Desktop styles (1280px and up)
+    @include desktop {
+        padding: 0 6.25rem;
+
+        &__logo {
+            height: 2.5rem;
+            margin-bottom: 0;
+        }
+
+        &__button {
+            display: block;
+            padding: 0.75rem 1.5rem;
+        }
     }
 }
+

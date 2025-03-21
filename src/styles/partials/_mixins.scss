@@ -1,11 +1,14 @@
+@use './variables' as *;  // Import variables
+
+// Breakpoint mixins
 @mixin tablet {
-    @media (min-width: $tablet-breakpoint) {
+    @media (min-width: #{$tablet-breakpoint}) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (min-width: $desktop-breakpoint) {
+    @media (min-width: #{$desktop-breakpoint}) {
         @content;
     }
-} 
+}
