@@ -1,0 +1,16 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/globals' as *;
+
+.hero {
+
+    // Tablet styles (768px and up)
+    @include tablet {
+    }
+
+    // Desktop styles (1280px and up)
+    @include desktop {
+    }
+}
+
