@@ -4,6 +4,12 @@
 @use '../../styles/partials/globals' as *;
 
 .hero {
+    width: 100%;
+    height: calc(100vh - 6.0625rem); // Subtract header height
+    background-image: url('../../assets/images/your-image.jpg'); // Replace with your image path
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     // Tablet styles (768px and up)
     @include tablet {
