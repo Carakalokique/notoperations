@@ -21,7 +21,8 @@
 
     &__button {
         display: none;
-        padding: 0.5rem 1rem;
+        height: 2.5rem;
+        padding: .625rem 1.25rem;
         background-color: $color-orange;
         color: $color-white;
         border: none;
@@ -46,9 +47,7 @@
         }
 
         &__button {
-            height: 2.5rem;
             display: block;
-            padding: .625rem 1.25rem;
         }
     }
 
