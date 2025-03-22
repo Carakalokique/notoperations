@@ -5,25 +5,21 @@
 
 .hero {
     width: 100%;
-    height: calc(100vh - 6.0625rem); // Subtract header height
-    background-image: url('../../assets/images/background.jpg'); // Replace with your image path
+    height: calc(100vh - 6.0625rem);
+    background-image: url('../../assets/images/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    flex-direction: column;  // Add this to stack children vertically
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 1rem;
     padding: 1rem;
 
-    &__title {
-        margin-bottom: 1rem;
-        color: $color-black;
-    }
 
     &__text {
-        margin-bottom: 1rem;
 
         &--emphasis {
             font-weight: bold;
@@ -31,44 +27,35 @@
         }
     }
 
-    &__link {
-            color: $color-black;
-            text-decoration: none;
-            font-size: 0.75rem;  // 12px
-            
-            &:hover {
-                text-decoration: underline;
-            }
+    &__container {
+        display: flex;
+        flex-direction: row;
+        gap: 0.25rem;
+        align-items: baseline;
     }
 
-    &__link-icon {
-        height: .3125rem;
-    }
-
-    &__button {
-        height: 2.5rem;
-        padding: .625rem 1.25rem;
-        background-color: $color-orange;
-        color: $color-white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-
-        &:hover {
-            background-color: $color-darkorange;
+    &__title {
+        
+        @include tablet {
+            width: 36rem;
         }
     }
 
-    // Tablet styles (768px and up)
-    @include tablet {
-        padding: 2rem;
-
+    &__link {
+        gap: 0.5rem;
     }
 
-    // Desktop styles (1280px and up)
+    &__link-icon {
+        height: 0.5rem;
+    }
+
+    @include tablet {
+        height: 75vh;
+        padding: 2rem;
+    }
+
     @include desktop {
         padding: 3rem;
-
     }
 }
 
