@@ -20,10 +20,15 @@
 
 
     &__text {
+        min-width: 16rem;
 
         &--emphasis {
             font-weight: bold;
             font-style: italic;
+        }
+
+        @include tablet {
+            width: 100%;
         }
     }
 
@@ -36,6 +41,7 @@
     }
 
     &__title {
+        min-width: 15rem;
         
         @include tablet {
             width: 36rem;
