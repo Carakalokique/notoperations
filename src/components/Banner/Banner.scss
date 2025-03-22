@@ -1,0 +1,63 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/globals' as *;
+
+.banner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.875rem;
+    background-color: $color-blue;
+    gap: 1rem;
+
+    &__text {
+        min-width: 16rem;
+        color: $color-white;
+
+        &--emphasis {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &__logos {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        @include tablet {
+            gap: 2rem;
+        }
+
+    }
+
+    &__logo {
+        // width: 20%;
+        max-height: 1rem;
+        object-fit: contain;  // Ensures logos maintain aspect ratio
+
+        @include tablet {
+max-height: 1.5rem; // Slightly larger on tablet
+        }
+    }
+
+    @include tablet {
+        gap: 1.5rem;
+    }
+
+    @include desktop {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+}
+

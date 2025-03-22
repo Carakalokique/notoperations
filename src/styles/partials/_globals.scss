@@ -39,7 +39,7 @@ a {
     color: $color-black;
     margin: 0;
     font-size: .875rem;  // 14px
-    
+
     @include tablet {
         font-size: 1rem;
     }
@@ -83,6 +83,7 @@ p {
 }
 
 button {
+    font-family: 'Song Myung', serif;
     font-size: 1rem; 
     padding: 0.5rem 1rem;
     background-color: $color-orange;
