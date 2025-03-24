@@ -3,7 +3,7 @@
 @use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/globals' as *;
 
-.offer {
+.catch {
     width: 100%;
     padding: 2.5rem 1rem;
     display: flex;
@@ -58,15 +58,14 @@
             max-width: 16.25rem;
             height: 16.25rem;
         }
+    }
 
     @include desktop {
         &__image {
             flex: 1;
-            // max-width: 50%;
             height: 23.0625rem;
             width: 23.5625rem;
         }
-    }
     }
 
     @include desktop {
@@ -74,6 +73,4 @@
         margin: 0 auto;
         padding: 3rem 6.25rem;
     }
-}
-
-
+} 
