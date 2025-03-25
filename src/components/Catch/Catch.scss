@@ -1,76 +1,123 @@
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/fonts' as *;
-@use '../../styles/partials/globals' as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/globals" as *;
 
 .catch {
-    width: 100%;
-    padding: 2.5rem 1rem;
+  width: 100%;
+  padding: 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  &__headers {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__content {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+  }
 
-    &__headers {
-        display: flex;
-        flex-direction: column;
-        gap: 0.25rem;
-    }
+  &__points {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
 
-    &__points {
-        display: flex;
-        flex-direction: column;
-        gap: 1.25rem;
-    }
+  &__point {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
 
-    &__point {
-        display: flex;
-        align-items: baseline;
-        gap: 0.5rem;
-    }
+  &__icon {
+    width: 0.6875rem;
+  }
 
-    &__icon {
-        width: .6875rem;
-    }
+  &__image {
+    display: flex;
+    height: 9.8125rem;
+    // width: 14.6225rem;
+    align-self: center;
+    margin-top: 1rem;
+  }
 
-    &__image {
-        display: flex;
-        height: 14.3125rem;
-        width: 14.6225rem;
-        align-self: center;
-        margin-top: 1rem;
+  &__container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    align-items: baseline;
+    align-self: center;
+  }
+
+  &__link {
+    gap: 0.5rem;
+    text-decoration: underline;
+  }
+
+  &__link-icon {
+    height: 0.5rem;
+  }
+
+  &__button {
+    padding: 0.5rem 1rem;
+    width: 10.5rem;
+    background-color: $color-orange;
+    color: $color-white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+
+    &:hover {
+      opacity: 0.9;
+      background-color: $color-darkorange;
     }
 
     @include tablet {
-        flex-direction: row;
-        padding: 2rem;
-        gap: 3rem;
-        align-items: center;
-
-        &__content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-        }
-
-        &__image {
-            flex: 1;
-            max-width: 16.25rem;
-            height: 16.25rem;
-        }
+      padding: 0.75rem 1.5rem;
     }
 
     @include desktop {
-        &__image {
-            flex: 1;
-            height: 23.0625rem;
-            width: 23.5625rem;
-        }
+      padding: 1rem 2rem;
+    }
+  }
+
+    @include tablet {
+      flex-direction: row;
+      padding: 2rem;
+      gap: 3rem;
+      align-items: center;
+
+      &__content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__image {
+        flex: 1;
+        max-width: 16.25rem;
+        height: 16.25rem;
+      }
     }
 
     @include desktop {
-        max-width: $desktop-breakpoint;
-        margin: 0 auto;
-        padding: 3rem 6.25rem;
+      &__image {
+        flex: 1;
+        height: 23.0625rem;
+        width: 23.5625rem;
+      }
     }
-} 
+
+    @include desktop {
+      max-width: $desktop-breakpoint;
+      margin: 0 auto;
+      padding: 3rem 6.25rem;
+    }
+  }
+

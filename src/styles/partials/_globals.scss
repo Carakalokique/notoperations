@@ -3,9 +3,7 @@
 @use './fonts' as *;  // Import fonts
 
 /* Reset all elements */
-*,
-*::before,
-*::after {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -96,4 +94,9 @@ button {
         opacity: 0.9;
         background-color: $color-darkorange;
     }
+}
+
+p,
+a {
+    font-family: 'Open Sans', sans-serif;
 } 
