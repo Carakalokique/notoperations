@@ -1,8 +1,8 @@
 import './Process.scss';
-import processImage1 from '../../assets/images/process-image-1.jpg';
-import processImage2 from '../../assets/images/process-image-2.jpg';
-import processImage3 from '../../assets/images/process-image-3.jpg';
-import processImage4 from '../../assets/images/process-image-4.jpg';
+import processImage1 from '../../assets/images/process-image-1.png';
+import processImage2 from '../../assets/images/process-image-2.png';
+import processImage3 from '../../assets/images/process-image-3.png';
+import processImage4 from '../../assets/images/process-image-4.png';
 
 function Process() {
     return (
@@ -13,7 +13,6 @@ function Process() {
                     <h3 className="process__subtitle">Your Subtitle Here</h3>
                 </div>
                 <div className="process__steps">
-                    <div className="process__squiggle" aria-hidden="true"></div>
                     <div className="process__step">
                         <p className="process__text">First step text here</p>
                         <img src={processImage1} alt="Process step 1" className="process__image" />

@@ -60,8 +60,8 @@
                 90deg,
                 transparent,
                 transparent 25%,
-                $primary-color 25%,
-                $primary-color 50%
+                $color-gray 25%,
+                $color-gray 50%
             );
             animation: squiggle 3s infinite linear;
             transform: translate3d(0, 0, 0);
