@@ -1,3 +1,5 @@
+import './Problem.scss';
+
 function Problem() {
     return (
         <section className="problem">

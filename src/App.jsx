@@ -15,8 +15,8 @@ function App() {
         <Hero />
         <Banner />
         <Offer />
-        <Process />
         <Problem />
+        <Process />
         <Story />
         <Catch />
       </main>
