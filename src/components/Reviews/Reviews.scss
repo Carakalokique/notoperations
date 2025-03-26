@@ -1,0 +1,64 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.reviews {
+    width: 100%;
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    &__headers {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    &__description {
+        text-align: center;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: center;
+        gap: 1.25rem;
+    }
+
+    &__card {
+        width: 280px;
+        height: 222px;
+        padding: 1.5625rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        background-color: white;
+    }
+
+    &__card-text {
+        color: $color-blue;
+    }
+
+    &__card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1.5625rem;
+    }
+
+    &__card-title {
+        font-size: 1.25rem;
+    }
+
+    @include desktop {
+        max-width: $desktop-breakpoint;
+        margin: 0 auto;
+        padding: 3rem 6.25rem;
+    }
+} 
