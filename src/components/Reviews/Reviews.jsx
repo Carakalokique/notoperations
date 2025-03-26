@@ -1,4 +1,6 @@
 import "./Reviews.scss";
+import quotes from "../../assets/icons/quotes.svg";
+import profile from "../../assets/images/profile.jpg";
 
 function Reviews() {
   return (
@@ -13,10 +15,16 @@ function Reviews() {
         </p>
         <div className="reviews__cards">
           <div className="reviews__card">
-            <p className="reviews__card-text">01</p>
-            <div className="reviews__card-content">
-              <h4 className="reviews__card-title">Card Title</h4>
-              <p className="reviews__card-description">Card description goes here</p>
+            <img src={quotes} alt="" className="reviews__quotes" />
+            <p className="reviews__testimonial">Your testimonial text here</p>
+            <div className="reviews__profile">
+              <div className="reviews__profile-image">
+                <img src={profile} alt="Reviewer name" />
+              </div>
+              <div className="reviews__profile-info">
+                <h3 className="reviews__profile-name">Reviewer Name</h3>
+                <p className="reviews__profile-title">Position Title</p>
+              </div>
             </div>
           </div>
         </div>
