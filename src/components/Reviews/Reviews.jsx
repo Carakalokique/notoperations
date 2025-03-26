@@ -1,6 +1,6 @@
 import "./Reviews.scss";
-import quotes from "../../assets/icons/quotes.svg";
-import profile from "../../assets/images/profile.jpg";
+import quotes from "../../assets/icons/quotes.png";
+import profile from "../../assets/images/kenny.png";
 
 function Reviews() {
   return (
