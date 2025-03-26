@@ -8,19 +8,22 @@ function Reviews() {
   
   const reviews = [
     {
-      testimonial: "First testimonial text here",
-      name: "Reviewer Name 1",
-      title: "Position Title 1"
+      testimonial: "First testimonial text here. This is the actual review content for card 1.",
+      name: "John Smith",
+      title: "CEO, Company One",
+      image: profile
     },
     {
-      testimonial: "Second testimonial text here",
-      name: "Reviewer Name 2",
-      title: "Position Title 2"
+      testimonial: "Second testimonial text here. This is the actual review content for card 2.",
+      name: "Jane Doe",
+      title: "Director, Company Two",
+      image: profile
     },
     {
-      testimonial: "Third testimonial text here",
-      name: "Reviewer Name 3",
-      title: "Position Title 3"
+      testimonial: "Third testimonial text here. This is the actual review content for card 3.",
+      name: "Mike Johnson",
+      title: "Founder, Company Three",
+      image: profile
     }
   ];
 
@@ -40,11 +43,11 @@ function Reviews() {
     <section className="reviews">
       <div className="reviews__content">
         <div className="reviews__headers">
-          <h2 className="reviews__title">Your Title Here</h2>
-          <h3 className="reviews__subtitle">Your Subtitle Here</h3>
+          <h2 className="reviews__title">The Reviews</h2>
+          <h3 className="reviews__subtitle">Not Convinced Yet?</h3>
         </div>
         <p className="reviews__description">
-          Your description paragraph goes here. This sits between the subtitle and the card.
+        Clients rave about how our automation boosts efficiency, speeds up onboarding, and transforms their agencies.
         </p>
         <div className="reviews__carousel">
           <div 
@@ -59,7 +62,7 @@ function Reviews() {
                 <p className="reviews__testimonial">{review.testimonial}</p>
                 <div className="reviews__profile">
                   <div className="reviews__profile-image">
-                    <img src={profile} alt={review.name} />
+                    <img src={review.image} alt={review.name} />
                   </div>
                   <div className="reviews__profile-info">
                     <h3 className="reviews__profile-name">{review.name}</h3>
