@@ -34,15 +34,26 @@
     }
 
     &__card {
-        width: 280px;        // Use exact pixels instead of rem
-        height: 222px;       // Use exact pixels instead of rem
-        padding: 1.25rem;
+        width: 280px;
+        height: 222px;
+        padding: 1.5625rem;  // 25px
         display: flex;
         flex-direction: column;
-        gap: 1rem;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 4px;
-        background-color: white;  // Add this to make card visible
+        background-color: white;
+    }
+
+    &__card-text {
+        color: $color-blue;
+    }
+
+    // Container for title and description to control their specific gap
+    &__card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;  // 8px
+        margin-top: 1.5625rem;  // 25px from text to title
     }
 
     &__card-title {
