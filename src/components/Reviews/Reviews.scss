@@ -84,6 +84,50 @@
         font-size: 0.75rem;  // 12px
     }
 
+    &__carousel {
+        position: relative;
+        width: 280px;  // Width of one card
+        margin: 0 auto;
+        overflow: hidden;  // Hides other cards
+    }
+
+    &__cards {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 840px;  // Width of all three cards (280px * 3)
+    }
+
+    &__card {
+        min-width: 280px;
+        flex-shrink: 0;
+        height: 222px;
+    }
+
+    &__dots {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    &__dot {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        border: none;
+        background-color: $color-gray;
+        cursor: pointer;
+        padding: 0;
+
+        &--active {
+            background-color: $color-blue;
+        }
+
+        &:hover {
+            background-color: $color-gray;
+        }
+    }
+
     @include desktop {
         max-width: $desktop-breakpoint;
         margin: 0 auto;
