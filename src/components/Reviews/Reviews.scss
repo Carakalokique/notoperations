@@ -98,7 +98,7 @@
         }
 
         @include desktop {
-            width: 280px;
+            width: 100%;
             max-width: none;
         }
     }
@@ -126,7 +126,7 @@
         }
 
         @include desktop {
-            width: 280px;
+            width: 50%;
             height: 222px;
         }
     }
@@ -150,6 +150,12 @@
 
         &--active {
             background-color: $color-orange;
+        }
+
+        @include desktop {
+            &:nth-child(3) {
+                display: none;
+            }
         }
     }
 } 
