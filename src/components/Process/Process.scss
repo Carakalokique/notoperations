@@ -47,7 +47,8 @@
     }
 
     &__image {
-        width: 100%;
+        width: 80%;
+        max-width: 200px;
         height: auto;
         border-radius: 5px;
     }
@@ -71,7 +72,10 @@
             padding: 0.5rem;
         }
 
-
+        &__image {
+            width: 90%;
+            max-width: 180px;
+        }
     }
 
     @include desktop {
@@ -84,6 +88,11 @@
 
         &__step {
             flex: 0 0 25%;
+        }
+
+        &__image {
+            width: 100%;
+            max-width: 160px;
         }
     }
 } 
