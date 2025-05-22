@@ -7,6 +7,7 @@ import Process from './components/Process/Process'
 import Story from './components/Story/Story'
 import Catch from './components/Catch/Catch'
 import Reviews from './components/Reviews/Reviews'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Catch />
         <Reviews />
       </main>
+      <Footer />
     </>
   )
 }

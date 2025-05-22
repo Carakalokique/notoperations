@@ -8,11 +8,18 @@
     height: 6.0625rem;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: $color-white;
     position: relative;
     z-index: 1;
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
 
     &__logo {
         height: 1.5rem;
@@ -21,26 +28,53 @@
 
     &__button {
         display: none;
+        font-family: 'Song Myung', serif;
+        font-size: 1rem; 
+        padding: 0.5rem 1rem;
+        width: 10.5rem;
+        background-color: $color-orange;
+        color: $color-white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+
+        &:hover {
+            opacity: 0.9;
+            background-color: $color-darkorange;
+        }
     }
 
     @include tablet {
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 3.75rem;
+        &__container {
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3.75rem;
+        }
 
         &__logo {
-            height: 1.5rem;
             margin-bottom: 0;
         }
 
         &__button {
             display: block;
+            padding: 0.75rem 1.5rem;
+        }
+    }
+    
+    @include desktop {
+        &__container {
+            max-width: $desktop-max-width;
+            margin: 0 auto;
         }
     }
 
     @include desktop {
-        max-width: $desktop-max-width;
-        margin: 0 auto;
+        &__container {
+            max-width: $desktop-max-width;
+            margin: 0 auto;
+        }
     }
 }
 

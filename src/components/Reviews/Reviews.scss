@@ -1,12 +1,32 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/globals" as *;
 
 .reviews {
     width: 100%;
-    padding: 2.5rem 1rem;
+    background-color: $color-white;
     display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        width: 100%;
+        padding: 2.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        @include tablet {
+            padding: 2.5rem 2rem;
+        }
+
+        @include desktop {
+            max-width: $desktop-breakpoint;
+            margin: 0 auto;
+            padding: 3rem 6.25rem;
+        }
+    }
 
     &__headers {
         display: flex;
@@ -71,6 +91,16 @@
         width: 280px;
         margin: 0 auto;
         overflow: hidden;
+
+        @include tablet {
+            width: 280px;
+            max-width: none;
+        }
+
+        @include desktop {
+            width: 280px;
+            max-width: none;
+        }
     }
 
     &__cards {
@@ -89,6 +119,16 @@
         border-radius: 4px;
         background-color: white;
         flex-shrink: 0;
+
+        @include tablet {
+            width: 280px;
+            height: 222px;
+        }
+
+        @include desktop {
+            width: 280px;
+            height: 222px;
+        }
     }
 
     &__dots {
@@ -102,23 +142,14 @@
         width: 0.5rem;
         height: 0.5rem;
         border-radius: 50%;
-        border: none;
         background-color: $color-gray;
+        border: none;
         cursor: pointer;
+        transition: background-color 0.3s ease;
         padding: 0;
 
         &--active {
-            background-color: $color-blue;
+            background-color: $color-orange;
         }
-
-        &:hover {
-            background-color: $color-gray;
-        }
-    }
-
-    @include desktop {
-        max-width: $desktop-breakpoint;
-        margin: 0 auto;
-        padding: 3rem 6.25rem;
     }
 } 

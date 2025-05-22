@@ -1,12 +1,46 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/globals" as *;
 
 .story {
     width: 100%;
-    padding: 2.5rem 1rem;
+    background-color: $color-white;
     display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        width: 100%;
+        padding: 2.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        @include tablet {
+            padding: 2.5rem 2rem;
+            gap: 3rem;
+        }
+
+        @include desktop {
+            max-width: $desktop-breakpoint;
+            margin: 0 auto;
+            padding: 3rem 6.25rem;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+
+    &__text-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        @include desktop {
+            flex: 1.5;
+        }
+    }
 
     &__headers {
         display: flex;
@@ -14,22 +48,49 @@
         gap: 0.25rem;
     }
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        gap: 1.25rem;
-    }
-
     &__intro {
         align-self: flex-start;
     }
 
-    &__image {
+    &__image-container-mobile {
         display: flex;
-        height: 9.8125rem;
-        align-self: center;
-        margin-top: 1rem;
-        border-radius: 5px;
+        justify-content: flex-start;
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__image-container-desktop {
+        display: none;
+
+        @include desktop {
+            display: flex;
+            flex: 0 0 auto;
+            width: 35.34375rem;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__image {
+        height: 16.25rem;
+        width: 16.25rem;
+        border-radius: 10px;
+        object-fit: contain;
+
+        @include tablet {
+            max-width: 16.25rem;
+            height: 16.25rem;
+            width: 16.25rem;
+            object-fit: contain;
+        }
+
+        @include desktop {
+            height: 23.0625rem;
+            width: 35.34375rem;
+            object-fit: cover;
+        }
     }
 
     &__paragraphs {
@@ -40,6 +101,11 @@
 
     &__paragraph {
         line-height: 1.5;
+
+        &--emphasis {
+            font-weight: bold;
+            font-style: italic;
+        }
     }
 
     &__squiggle {
@@ -95,38 +161,5 @@
                 background-size: 25% 100%;
             }
         }
-    }
-
-    @include tablet {
-        flex-direction: row;
-        padding: 2rem;
-        gap: 3rem;
-        align-items: flex-start;
-
-        &__content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        &__image {
-            flex: 1;
-            max-width: 16.25rem;
-            height: 16.25rem;
-        }
-    }
-
-    @include desktop {
-        &__image {
-            flex: 1;
-            height: 23.0625rem;
-            width: 23.5625rem;
-        }
-    }
-
-    @include desktop {
-        max-width: $desktop-breakpoint;
-        margin: 0 auto;
-        padding: 3rem 6.25rem;
     }
 } 

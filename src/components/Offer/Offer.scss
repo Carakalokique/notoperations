@@ -5,11 +5,24 @@
 
 .offer {
     width: 100%;
-    padding: 2.5rem 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
     background-color: $color-gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        width: 100%;
+        padding: 2.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 
     &__headers {
         display: flex;
@@ -42,10 +55,12 @@
     }
 
     @include tablet {
-        flex-direction: row;
-        padding: 2rem;
-        gap: 3rem;
-        align-items: center;
+        &__container {
+            flex-direction: row;
+            padding: 2.5rem 2rem;
+            gap: 3rem;
+            align-items: center;
+        }
 
         &__content {
             flex: 1;
@@ -59,21 +74,23 @@
             max-width: 16.25rem;
             height: 16.25rem;
         }
+    }
 
     @include desktop {
-        &__image {
-            flex: 1;
-            // max-width: 50%;
-            height: 23.0625rem;
-            width: 23.5625rem;
+        &__container {
+            gap: 1rem;
+            max-width: $desktop-max-width;
+            margin: 0 auto;
+            padding: 0 100px;
+            justify-content: center;
         }
-    }
-    }
 
-    @include desktop {
-        max-width: $desktop-breakpoint;
-        margin: 0 auto;
-        padding: 3rem 6.25rem;
+        &__image {
+            flex: 0 0 auto;
+            width: 23.5625rem;
+            height: 23.0625rem;
+            object-fit: contain;
+        }
     }
 }
 
