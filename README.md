@@ -1,12 +1,102 @@
-# React + Vite
+# Not Operations
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive business operations consulting website built with React and Vite.
 
-Currently, two official plugins are available:
+## 🚀 Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-## Expanding the ESLint configuration
+### Installation
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+```bash
+git clone https://github.com/Carakalokique/notoperations.git
+cd notoperations
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+### Development
+
+Run the development server:
+```bash
+npm run dev
+```
+
+The site will be available at `http://localhost:5173`
+
+## 🏗️ Building for Production
+
+To create a production build:
+```bash
+npm run build
+```
+
+This will generate optimized files in the `dist` directory.
+
+## 📦 Deployment to GitHub Pages
+
+### Automatic Deployment (if gh-pages package is working)
+```bash
+npm run deploy
+```
+
+### Manual Deployment (Recommended)
+
+Since the `gh-pages` package may have issues, use this manual deployment method:
+
+1. **Build the project:**
+```bash
+npm run build
+```
+
+2. **Copy CNAME file to dist (if you have a custom domain):**
+```bash
+cp CNAME dist/
+```
+
+3. **Deploy to GitHub Pages:**
+```bash
+git add dist -f
+git commit -m "Deploy to GitHub Pages"
+git push origin `git subtree split --prefix dist main`:gh-pages --force
+```
+
+### First-time Setup
+
+If you haven't set up GitHub Pages yet:
+1. Go to your repository on GitHub
+2. Navigate to Settings → Pages
+3. Under "Source", select "Deploy from a branch"
+4. Choose `gh-pages` branch and `/ (root)` folder
+5. Click Save
+
+Your site will be available at: `https://[your-username].github.io/[repository-name]/`
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework:** React 19
+- **Build Tool:** Vite
+- **Styling:** SCSS
+- **Deployment:** GitHub Pages
+
+## 📱 Features
+
+- Fully responsive design
+- Mobile-first approach
+- Animated review carousel
+- Smooth scrolling sections
+- Optimized images and fonts
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
