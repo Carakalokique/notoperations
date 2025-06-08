@@ -36,7 +36,7 @@ function Process() {
                             <p className="process__text">04</p>
                             <img src={processImage4} alt="Process step 4" className="process__image" />
                             <h3 className="process__step-title">Consultation</h3>
-                            <p className="process__step-description">Book a strategy call to
+                            <p className="process__step-description">Book a strategy session to
                             plan your next steps.</p>
                         </div>
                     </div>

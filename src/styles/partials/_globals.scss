@@ -13,6 +13,7 @@
 html {
     font-size: 100%; /* 16px */
     background-color: #fff;
+    overflow-x: hidden;  // Added to prevent horizontal scroll
 }
 
 /* Set body to take up full height and width */
@@ -21,6 +22,7 @@ body {
     max-width: 125rem;
     overflow-x: hidden;
     margin: 0 auto;
+    position: relative;  // Added to ensure proper containment
 }
 
 /* Remove default list styles */
@@ -36,7 +38,7 @@ a {
     font-weight: $regular;
     color: $color-black;
     margin: 0;
-    font-size: .875rem;  // 14px
+    font-size: 1rem;  // Increased from .875rem to 1rem for mobile
 
     @include tablet {
         font-size: 1rem;
@@ -53,28 +55,28 @@ h3 {
 }
 
 h1 {
-    font-size: 2rem;  // 32px
+    font-size: 3rem;  // Increased from 2.5rem to 3rem for mobile
     @include tablet {
         font-size: 3.75rem;
     }
 }
 
 h2 {
-    font-size: 1.75rem;
+    font-size: 2rem;  // Increased from 1.75rem to 2rem for mobile
     @include tablet {
         font-size: 2.25rem;
     }
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.625rem;  // Increased from 1.5rem to 1.625rem for mobile
     @include tablet {
         font-size: 1.75rem;
     }
 }
 
 p {
-    font-size: .875rem;  // 14px
+    font-size: 1.125rem;  // Increased from 1rem to 1.125rem for mobile
     @include tablet {
         font-size: 1rem;
     }
@@ -99,4 +101,24 @@ button {
 p,
 a {
     font-family: 'Open Sans', sans-serif;
+}
+
+/* Prevent horizontal overflow on all sections */
+section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure main content doesn't overflow */
+main {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure all images don't cause overflow */
+img {
+    max-width: 100%;
+    height: auto;
 } 

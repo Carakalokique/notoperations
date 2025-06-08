@@ -12,7 +12,7 @@
 
     &__container {
         width: 100%;
-        padding: 2.5rem 1rem;
+        padding: 2.5rem 1.5rem;
         display: flex;
         flex-direction: column;
         gap: 1.25rem;
@@ -99,17 +99,22 @@
 
         @include desktop {
             width: 100%;
-            max-width: none;
+            overflow: hidden;
         }
     }
 
     &__cards {
         display: flex;
         transition: transform 0.5s ease;
+        gap: 0;  // No gap on mobile to prevent shifting
+        
+        @include desktop {
+            gap: 1rem;  // Gap only on desktop
+        }
     }
 
     &__card {
-        width: 280px;
+        width: 280px;  // Match carousel width exactly
         height: 222px;
         padding: 1.5625rem;
         display: flex;
@@ -118,7 +123,8 @@
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 4px;
         background-color: white;
-        flex-shrink: 0;
+        flex-shrink: 0;  // Prevent cards from shrinking
+        flex-grow: 0;  // Prevent cards from growing
 
         @include tablet {
             width: 280px;
@@ -126,7 +132,11 @@
         }
 
         @include desktop {
-            width: 50%;
+            // More conservative sizing to ensure fit
+            flex: 0 0 calc((100% - 2rem) / 3);  // 2rem = 2 gaps of 1rem each
+            width: calc((100% - 2rem) / 3);
+            max-width: 350px;  // Lower max-width
+            min-width: 280px;  // Ensure minimum readability
             height: 222px;
         }
     }
@@ -150,12 +160,6 @@
 
         &--active {
             background-color: $color-orange;
-        }
-
-        @include desktop {
-            &:nth-child(3) {
-                display: none;
-            }
         }
     }
 } 

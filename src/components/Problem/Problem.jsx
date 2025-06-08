@@ -23,14 +23,14 @@ function Problem() {
               <p className="problem__card-text">02</p>
               <div className="problem__card-content">
                 <h4 className="problem__card-title">Overworked</h4>
-                <p className="problem__card-description">Constantly being the bottleneck in every client project, slowing down progress and causing delays.</p>
+                <p className="problem__card-description">Endlessly copy-pasting between dozens of disconnected tools while spending hours on tasks that could be automated.</p>
               </div>
             </div>
             <div className="problem__card">
               <p className="problem__card-text">03</p>
               <div className="problem__card-content">
                 <h4 className="problem__card-title">Inefficient</h4>
-                <p className="problem__card-description">Constantly being the bottleneck in every client project, slowing down progress and causing delays.</p>
+                <p className="problem__card-description">Having no clue how to scale those operations without adding overwhelm or overcomplicating them.</p>
               </div>
             </div>
           </div>

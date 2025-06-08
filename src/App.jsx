@@ -11,7 +11,7 @@ import Footer from './components/Footer/Footer'
 
 function App() {
   return (
-    <>
+    <div style={{ overflowX: 'hidden', width: '100%', position: 'relative' }}>
       <Header />
       <main>
         <Hero />
@@ -24,7 +24,7 @@ function App() {
         <Reviews />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 

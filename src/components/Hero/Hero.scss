@@ -19,17 +19,19 @@
 
     &__container {
         width: 100%;
+        max-width: 100%;
         padding: 0 1rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 1.25rem;
+        gap: 2.5rem;
     }
 
     &__text {
-        min-width: 16rem;
+        width: 100%;
+        max-width: 100%;
 
         &--emphasis {
             font-weight: bold;
@@ -50,7 +52,8 @@
     }
 
     &__title {
-        min-width: 15rem;
+        width: 100%;
+        max-width: 100%;
         
         @include tablet {
             width: 36rem;
@@ -69,9 +72,9 @@
     &__button {
         display: inline-block;
         font-family: 'Song Myung', serif;
-        font-size: 1rem; 
-        padding: 0.5rem 1rem;
-        width: 10.5rem;
+        font-size: 1.125rem;
+        padding: 0.75rem 1.5rem;
+        width: 13rem;
         background-color: $color-orange;
         color: $color-white;
         border: none;
@@ -86,7 +89,9 @@
         }
 
         @include tablet {
+            font-size: 1rem;
             padding: 0.75rem 1.5rem;
+            width: 10.5rem;
         }
     }
 
@@ -97,7 +102,7 @@
         
         &__container {
             padding: 0 2rem;
-            gap: 3rem;
+            gap: 2.5rem;
             align-items: center;
         }
     }
@@ -107,7 +112,7 @@
         min-height: 450px;
         
         &__container {
-            gap: 1rem;
+            gap: 2rem;
             max-width: $desktop-max-width;
             margin: 0 auto;
             padding: 0 100px;

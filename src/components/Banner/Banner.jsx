@@ -8,7 +8,7 @@ function Banner() {
         <section className="banner">
             <div className="banner__container">
                 <p className="banner__text">
-                    Trusted by <span className="banner__text--emphasis">60+ business providers</span> including dozens of premium service providers:
+                    Trusted by <span className="banner__text--emphasis">60+ businesses</span> including dozens of premium service providers:
                 </p>
                 <div className="banner__logos">
                     <img src={binance} alt="Binance" className="banner__logo" />

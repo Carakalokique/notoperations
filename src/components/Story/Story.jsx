@@ -11,23 +11,23 @@ function Story() {
                         <h3 className="story__subtitle">How it All Started</h3>
                     </div>
                     <p className="story__intro">
-                        I'm Kenny, founder of Not Operations.
+                    I'm Kenny, founder of Not Operations. We are operations and automation consultants.
                     </p>
                     <div className="story__image-container-mobile">
                         <img src={kenny} alt="Kenny, founder of Not Operations" className="story__image" />
                     </div>
                     <div className="story__paragraphs">
                         <p className="story__paragraph">
-                            We're operations consultants. Instead of creating complexity, we make systems that you can actually use to help you focus on what you do best.
+                        We've transformed operations for 60+ businesses, cutting admin time by 50%, eliminating dozens of spreadsheets, and reducing software costs by up to 90%.
                         </p>
                         <p className="story__paragraph">
-                            <span className="story__paragraph--emphasis">We've worked with over 60+ businesses, including 6 to 7-figure contracts and a dozen premium B2B service providers.</span>
+                            <span className="story__paragraph--emphasis">Our experience spans from boutique agencies to Fortune 500 companies like Yahoo Finance and Binance, from 5 to 7 figure projects.</span>
                         </p>
                         <p className="story__paragraph">
-                            We're partnering with select premium service providers. Let us help you build strong foundations, unify tools, and add smart automations to make business fun.
+                        We're partnering with select premium service providers who want to push their operations to the next level but don't have the bandwidth or technical expertise to do it in house.
                         </p>
                         <p className="story__paragraph">
-                            Our ultimate game is to build an ecosystem where businesses can have fun growing their companies, where operations fade into the background and owners can stay in flow doing what they love.
+                        Our ultimate vision is to create an ecosystem for business owners to help them build businesses that feel like a game to play.
                         </p>
                     </div>
                 </div>

@@ -26,7 +26,7 @@ function Offer() {
                         </p>
                         <p className="offer__point">
                             <img src={checkmark} alt="checkmark" className="offer__icon" />
-                            Specific bottlenecks holding back your growth.
+                            Clear next steps to scale your operations.
                         </p>
                     </div>
                 </div>
